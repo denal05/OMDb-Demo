@@ -6,7 +6,7 @@ target 'OMDb Demo' do
   use_frameworks!
 
   # Pods for OMDb Demo
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 4.4'
   pod 'IQKeyboardManagerSwift'
   pod 'SDWebImage'
   pod 'SwiftyJSON'
