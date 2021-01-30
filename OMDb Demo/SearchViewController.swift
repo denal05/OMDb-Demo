@@ -8,7 +8,7 @@
 import UIKit
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     static let secrets = parseSecrets()
     static let OMDb_API_KEY = secrets.api_key

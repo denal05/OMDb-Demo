@@ -3,17 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0E7345B225C557DE00B20829 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7345B125C557DE00B20829 /* AppDelegate.swift */; };
 		0E7345B425C557DE00B20829 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7345B325C557DE00B20829 /* SceneDelegate.swift */; };
-		0E7345B625C557DE00B20829 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7345B525C557DE00B20829 /* ViewController.swift */; };
+		0E7345B625C557DE00B20829 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7345B525C557DE00B20829 /* SearchViewController.swift */; };
 		0E7345B925C557DE00B20829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7345B725C557DE00B20829 /* Main.storyboard */; };
 		0E7345BB25C557E300B20829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7345BA25C557E300B20829 /* Assets.xcassets */; };
 		0E7345BE25C557E300B20829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7345BC25C557E300B20829 /* LaunchScreen.storyboard */; };
 		0E7345C825C5581A00B20829 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E7345C725C5581A00B20829 /* Secrets.plist */; };
+		0EA70B4625C5C7B200EE400F /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA70B4525C5C7B200EE400F /* TrendingViewController.swift */; };
+		0EA70B4A25C5CBE600EE400F /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA70B4925C5CBE600EE400F /* FavoritesViewController.swift */; };
+		0EA70B4D25C5CC1000EE400F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA70B4C25C5CC1000EE400F /* SettingsViewController.swift */; };
+		0EA70B5125C5D04700EE400F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA70B5025C5D04600EE400F /* TabBarController.swift */; };
 		A98AD33881DAA5BF20EE3AF7 /* Pods_OMDb_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F1955087CA53DE3723D653 /* Pods_OMDb_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +25,16 @@
 		0E7345AE25C557DE00B20829 /* OMDb Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMDb Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7345B125C557DE00B20829 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E7345B325C557DE00B20829 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0E7345B525C557DE00B20829 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E7345B525C557DE00B20829 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0E7345B825C557DE00B20829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E7345BA25C557E300B20829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E7345BD25C557E300B20829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E7345BF25C557E300B20829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E7345C725C5581A00B20829 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		0EA70B4525C5C7B200EE400F /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		0EA70B4925C5CBE600EE400F /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		0EA70B4C25C5CC1000EE400F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0EA70B5025C5D04600EE400F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		27B75F73F0E6E051923F3D3A /* Pods-OMDb Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb Demo.debug.xcconfig"; path = "Target Support Files/Pods-OMDb Demo/Pods-OMDb Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		28C58B1471566E4C02CEAD8A /* Pods-OMDb Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb Demo.release.xcconfig"; path = "Target Support Files/Pods-OMDb Demo/Pods-OMDb Demo.release.xcconfig"; sourceTree = "<group>"; };
 		D6F1955087CA53DE3723D653 /* Pods_OMDb_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +75,11 @@
 			children = (
 				0E7345B125C557DE00B20829 /* AppDelegate.swift */,
 				0E7345B325C557DE00B20829 /* SceneDelegate.swift */,
-				0E7345B525C557DE00B20829 /* ViewController.swift */,
+				0EA70B5025C5D04600EE400F /* TabBarController.swift */,
+				0EA70B4525C5C7B200EE400F /* TrendingViewController.swift */,
+				0EA70B4925C5CBE600EE400F /* FavoritesViewController.swift */,
+				0E7345B525C557DE00B20829 /* SearchViewController.swift */,
+				0EA70B4C25C5CC1000EE400F /* SettingsViewController.swift */,
 				0E7345B725C557DE00B20829 /* Main.storyboard */,
 				0E7345BA25C557E300B20829 /* Assets.xcassets */,
 				0E7345BC25C557E300B20829 /* LaunchScreen.storyboard */,
@@ -83,7 +95,6 @@
 				27B75F73F0E6E051923F3D3A /* Pods-OMDb Demo.debug.xcconfig */,
 				28C58B1471566E4C02CEAD8A /* Pods-OMDb Demo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,9 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E7345B625C557DE00B20829 /* ViewController.swift in Sources */,
+				0E7345B625C557DE00B20829 /* SearchViewController.swift in Sources */,
+				0EA70B4625C5C7B200EE400F /* TrendingViewController.swift in Sources */,
 				0E7345B225C557DE00B20829 /* AppDelegate.swift in Sources */,
+				0EA70B4A25C5CBE600EE400F /* FavoritesViewController.swift in Sources */,
+				0EA70B5125C5D04700EE400F /* TabBarController.swift in Sources */,
 				0E7345B425C557DE00B20829 /* SceneDelegate.swift in Sources */,
+				0EA70B4D25C5CC1000EE400F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
