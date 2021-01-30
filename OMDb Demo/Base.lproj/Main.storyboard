@@ -37,7 +37,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="oVG-MH-dbF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="sparkles" catalog="system" selectedImage="sparkles" id="tDv-qQ-gNW"/>
                 </viewController>
@@ -53,7 +52,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="cvv-n7-Xql"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="star" catalog="system" selectedImage="star.fill" id="sAT-Tx-XIy"/>
                 </viewController>
@@ -68,14 +66,51 @@
                     <view key="view" contentMode="scaleToFill" id="ALo-sd-8Fg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="EPg-w6-DcC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="film" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SrO-XJ-RsW">
+                                <rect key="frame" x="0.0" y="57" width="320" height="317.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SrO-XJ-RsW" secondAttribute="height" multiplier="1:1" id="NJ3-Xg-940"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y2n-Ra-Zrl">
+                                <rect key="frame" x="0.0" y="376" width="320" height="143"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reusableTableCell" id="AMM-bS-qDA">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AMM-bS-qDA" id="Ag4-cY-6op">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lcE-hD-Eaz"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="SrO-XJ-RsW" firstAttribute="leading" secondItem="lcE-hD-Eaz" secondAttribute="leading" id="2m0-cq-yAv"/>
+                            <constraint firstItem="EPg-w6-DcC" firstAttribute="trailing" secondItem="lcE-hD-Eaz" secondAttribute="trailing" id="3gn-jg-LFI"/>
+                            <constraint firstItem="EPg-w6-DcC" firstAttribute="leading" secondItem="lcE-hD-Eaz" secondAttribute="leading" id="56h-CF-Vqy"/>
+                            <constraint firstItem="EPg-w6-DcC" firstAttribute="top" secondItem="lcE-hD-Eaz" secondAttribute="top" id="8Rp-q8-EfE"/>
+                            <constraint firstItem="lcE-hD-Eaz" firstAttribute="trailing" secondItem="y2n-Ra-Zrl" secondAttribute="trailing" id="ODi-tv-p7i"/>
+                            <constraint firstItem="y2n-Ra-Zrl" firstAttribute="leading" secondItem="lcE-hD-Eaz" secondAttribute="leading" id="OVs-PH-jbJ"/>
+                            <constraint firstItem="SrO-XJ-RsW" firstAttribute="top" secondItem="EPg-w6-DcC" secondAttribute="bottom" id="UsY-ri-Xgw"/>
+                            <constraint firstItem="lcE-hD-Eaz" firstAttribute="trailing" secondItem="SrO-XJ-RsW" secondAttribute="trailing" id="Zhf-98-toz"/>
+                            <constraint firstItem="y2n-Ra-Zrl" firstAttribute="top" secondItem="SrO-XJ-RsW" secondAttribute="bottom" id="x0I-C7-B61"/>
+                            <constraint firstItem="y2n-Ra-Zrl" firstAttribute="bottom" secondItem="lcE-hD-Eaz" secondAttribute="bottom" id="xpQ-fK-KeO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="magnifyingglass.circle" catalog="system" selectedImage="magnifyingglass.circle.fill" id="Zs1-tI-Zl9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="en5-GC-3xn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-181" y="522"/>
+            <point key="canvasLocation" x="-181.875" y="521.83098591549299"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="U0o-gn-qBh">
@@ -85,7 +120,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="KyY-tr-c0F"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" selectedImage="gear" id="fx6-eL-55a"/>
                 </viewController>
@@ -95,6 +129,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="film" catalog="system" width="128" height="93"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
@@ -103,15 +138,6 @@
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -11,6 +11,7 @@ class TabBarController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.selectedIndex = 2
     }
     
     override func didReceiveMemoryWarning() {
