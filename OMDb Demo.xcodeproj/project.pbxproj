@@ -14,6 +14,7 @@
 		0E7345BB25C557E300B20829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7345BA25C557E300B20829 /* Assets.xcassets */; };
 		0E7345BE25C557E300B20829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7345BC25C557E300B20829 /* LaunchScreen.storyboard */; };
 		0E7345C825C5581A00B20829 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E7345C725C5581A00B20829 /* Secrets.plist */; };
+		A98AD33881DAA5BF20EE3AF7 /* Pods_OMDb_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F1955087CA53DE3723D653 /* Pods_OMDb_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		0E7345BD25C557E300B20829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E7345BF25C557E300B20829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E7345C725C5581A00B20829 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		27B75F73F0E6E051923F3D3A /* Pods-OMDb Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb Demo.debug.xcconfig"; path = "Target Support Files/Pods-OMDb Demo/Pods-OMDb Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		28C58B1471566E4C02CEAD8A /* Pods-OMDb Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb Demo.release.xcconfig"; path = "Target Support Files/Pods-OMDb Demo/Pods-OMDb Demo.release.xcconfig"; sourceTree = "<group>"; };
+		D6F1955087CA53DE3723D653 /* Pods_OMDb_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98AD33881DAA5BF20EE3AF7 /* Pods_OMDb_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				0E7345B025C557DE00B20829 /* OMDb Demo */,
 				0E7345AF25C557DE00B20829 /* Products */,
+				49FF1FD03F41090C4907F05D /* Pods */,
+				DD005A676E2D7CF97A2785BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,24 @@
 			path = "OMDb Demo";
 			sourceTree = "<group>";
 		};
+		49FF1FD03F41090C4907F05D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27B75F73F0E6E051923F3D3A /* Pods-OMDb Demo.debug.xcconfig */,
+				28C58B1471566E4C02CEAD8A /* Pods-OMDb Demo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD005A676E2D7CF97A2785BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1955087CA53DE3723D653 /* Pods_OMDb_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E7345C225C557E300B20829 /* Build configuration list for PBXNativeTarget "OMDb Demo" */;
 			buildPhases = (
+				26E2EC7A1843C3B36C0172CD /* [CP] Check Pods Manifest.lock */,
 				0E7345AA25C557DE00B20829 /* Sources */,
 				0E7345AB25C557DE00B20829 /* Frameworks */,
 				0E7345AC25C557DE00B20829 /* Resources */,
+				E9E266BBD7CC865B692B5E57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26E2EC7A1843C3B36C0172CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDb Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9E266BBD7CC865B692B5E57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OMDb Demo/Pods-OMDb Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OMDb Demo/Pods-OMDb Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OMDb Demo/Pods-OMDb Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E7345AA25C557DE00B20829 /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		0E7345C325C557E300B20829 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B75F73F0E6E051923F3D3A /* Pods-OMDb Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,6 +377,7 @@
 		};
 		0E7345C425C557E300B20829 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C58B1471566E4C02CEAD8A /* Pods-OMDb Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
