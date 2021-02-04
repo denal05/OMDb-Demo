@@ -15,7 +15,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
-    // @TODO Previously was itemArray
     static var movieData = OMDbAPIResult(Title: "~~PLACEHOLDER~~")
     static var movieDictionary = movieData.dictionaryRepresentation
     static var movieArray = Array(movieDictionary.values)
@@ -43,18 +42,17 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return SearchViewController.movieArray.count
-        return 1
+        return SearchViewController.movieArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = SearchViewController.movieArray[indexPath.row]
-        print(#function + ": item is: \n \(item)")
+        //print(#function + ": item is: \n \(item)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "reusableTableCell", for: indexPath)
-//        if let stringItem = item as? String {
-//            cell.textLabel?.text = stringItem
-//        }
-        cell.textLabel?.text = SearchViewController.movieData.Title
+        if let stringItem = item as? String {
+            cell.textLabel?.text = stringItem
+            cell.detailTextLabel?.text = "Subtitle" // = Array(SearchViewController.movieDictionary.keys)[indexPath.row]
+        }
         return cell
     }
     
@@ -92,8 +90,9 @@ extension SearchViewController: OMDbManagerDelegate {
         print(#function + ": \(movieModel.Title)")
         DispatchQueue.main.async {
             SearchViewController.movieData = movieModel
-            print(#function + ": movieModel.Title is: \n \(movieModel.Title)")
-            print(#function + ": SearchViewController.movieData.Title is: \n \(SearchViewController.movieData.Title)")
+            SearchViewController.movieDictionary = SearchViewController.movieData.dictionaryRepresentation
+            SearchViewController.movieArray = Array(SearchViewController.movieDictionary.values)
+            print(#function + ": SearchViewController.movieArray is: \n \(SearchViewController.movieArray)")
             self.imageView.sd_setImage(with: URL(string: movieModel.Poster))
             self.tableView.reloadData()
         }
@@ -101,5 +100,10 @@ extension SearchViewController: OMDbManagerDelegate {
     
     func didFailWithError(error: Error) {
         print(#function + ": \(error)")
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error:", message: "Couldn't find that movie title.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        }
     }
 }

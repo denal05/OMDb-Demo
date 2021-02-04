@@ -23,7 +23,7 @@ struct OMDbManager {
     func fetchOMDbAPIResultWithURLSession(movieTitle: String) {
         let urlString = omdbApiUrl +
                         "apikey=" + OMDbManager.OMDb_API_KEY +
-                        "&t=" + movieTitle
+                        "&t=" + movieTitle.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)!
         print(#function + ": \(urlString)")
         performURLSessionRequest(with: urlString)
     }
@@ -55,11 +55,35 @@ struct OMDbManager {
     func parseJSON(_ movieData: Data) -> OMDbAPIResult? {
         let decoder = JSONDecoder()
         do {
+
             let decodedData = try decoder.decode(OMDbAPIResult.self, from: movieData)
-            let id     = decodedData.imdbID
-            let title  = decodedData.Title
-            let poster = decodedData.Poster
-            let omdbModel = OMDbAPIResult(Title: title, Poster: poster)
+            let omdbModel = OMDbAPIResult(
+                                Title:      decodedData.Title,
+                                Year:       decodedData.Year,
+                                Rated:      decodedData.Rated,
+                                Released:   decodedData.Released,
+                                Runtime:    decodedData.Runtime,
+                                Genre:      decodedData.Genre,
+                                Director:   decodedData.Director,
+                                Writer:     decodedData.Writer,
+                                Actors:     decodedData.Actors,
+                                Plot:       decodedData.Plot,
+                                Language:   decodedData.Language,
+                                Country:    decodedData.Country,
+                                Awards:     decodedData.Awards,
+                                Poster:     decodedData.Poster,
+                                Ratings:    decodedData.Ratings,
+                                Metascore:  decodedData.Metascore,
+                                imdbRating: decodedData.imdbRating,
+                                imdbVotes:  decodedData.imdbVotes,
+                                imdbID:     decodedData.imdbID,
+                                Type:       decodedData.Type,
+                                DVD:        decodedData.DVD,
+                                BoxOffice:  decodedData.BoxOffice,
+                                Production: decodedData.Production,
+                                Website:    decodedData.Website,
+                                Response:   decodedData.Response
+                            )
             print(#function + ": decodedData.Title is \"\(decodedData.Title)\"")
             return omdbModel
         } catch {
