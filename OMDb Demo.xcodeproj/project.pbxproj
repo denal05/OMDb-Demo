@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E05557225C7F28E00484209 /* OMDbAPIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05557125C7F28E00484209 /* OMDbAPIResult.swift */; };
+		0E464B9125CB42DE0092244C /* OMDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E464B9025CB42DE0092244C /* OMDbManager.swift */; };
 		0E7345B225C557DE00B20829 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7345B125C557DE00B20829 /* AppDelegate.swift */; };
 		0E7345B425C557DE00B20829 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7345B325C557DE00B20829 /* SceneDelegate.swift */; };
 		0E7345B625C557DE00B20829 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7345B525C557DE00B20829 /* SearchViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E05557125C7F28E00484209 /* OMDbAPIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbAPIResult.swift; sourceTree = "<group>"; };
+		0E464B9025CB42DE0092244C /* OMDbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbManager.swift; sourceTree = "<group>"; };
 		0E7345AE25C557DE00B20829 /* OMDb Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMDb Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7345B125C557DE00B20829 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E7345B325C557DE00B20829 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,18 +79,44 @@
 			children = (
 				0E7345B125C557DE00B20829 /* AppDelegate.swift */,
 				0E7345B325C557DE00B20829 /* SceneDelegate.swift */,
-				0EA70B5025C5D04600EE400F /* TabBarController.swift */,
-				0EA70B4525C5C7B200EE400F /* TrendingViewController.swift */,
-				0EA70B4925C5CBE600EE400F /* FavoritesViewController.swift */,
-				0E7345B525C557DE00B20829 /* SearchViewController.swift */,
-				0EA70B4C25C5CC1000EE400F /* SettingsViewController.swift */,
-				0E7345B725C557DE00B20829 /* Main.storyboard */,
+				0EC641C525CA0DEA00533C0D /* Model */,
+				0EC641C625CA0E1500533C0D /* View */,
+				0EC641C425CA0DD600533C0D /* Controller */,
 				0E7345BA25C557E300B20829 /* Assets.xcassets */,
 				0E7345BC25C557E300B20829 /* LaunchScreen.storyboard */,
 				0E7345BF25C557E300B20829 /* Info.plist */,
 				0E7345C725C5581A00B20829 /* Secrets.plist */,
 			);
 			path = "OMDb Demo";
+			sourceTree = "<group>";
+		};
+		0EC641C425CA0DD600533C0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0EA70B5025C5D04600EE400F /* TabBarController.swift */,
+				0EA70B4525C5C7B200EE400F /* TrendingViewController.swift */,
+				0EA70B4925C5CBE600EE400F /* FavoritesViewController.swift */,
+				0E7345B525C557DE00B20829 /* SearchViewController.swift */,
+				0EA70B4C25C5CC1000EE400F /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0EC641C525CA0DEA00533C0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E05557125C7F28E00484209 /* OMDbAPIResult.swift */,
+				0E464B9025CB42DE0092244C /* OMDbManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0EC641C625CA0E1500533C0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E7345B725C557DE00B20829 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		49FF1FD03F41090C4907F05D /* Pods */ = {
@@ -222,11 +252,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E7345B625C557DE00B20829 /* SearchViewController.swift in Sources */,
+				0E05557225C7F28E00484209 /* OMDbAPIResult.swift in Sources */,
 				0EA70B4625C5C7B200EE400F /* TrendingViewController.swift in Sources */,
 				0E7345B225C557DE00B20829 /* AppDelegate.swift in Sources */,
 				0EA70B4A25C5CBE600EE400F /* FavoritesViewController.swift in Sources */,
 				0EA70B5125C5D04700EE400F /* TabBarController.swift in Sources */,
 				0E7345B425C557DE00B20829 /* SceneDelegate.swift in Sources */,
+				0E464B9125CB42DE0092244C /* OMDbManager.swift in Sources */,
 				0EA70B4D25C5CC1000EE400F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
