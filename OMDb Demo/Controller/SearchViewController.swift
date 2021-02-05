@@ -48,11 +48,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = SearchViewController.movieArray[indexPath.row]
         //print(#function + ": item is: \n \(item)")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reusableTableCell", for: indexPath)
+        //  cell = tableView.dequeueReusableCell(withIdentifier: "reusableTableCell", for: indexPath)
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "reusableTableCell")
         if let stringItem = item as? String {
             cell.textLabel?.text = stringItem
-            cell.detailTextLabel?.text = "Subtitle" // = Array(SearchViewController.movieDictionary.keys)[indexPath.row]
+            cell.detailTextLabel?.text = Array(SearchViewController.movieDictionary.keys)[indexPath.row]
         }
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.lineBreakMode = .byWordWrapping
         return cell
     }
     
